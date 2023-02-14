@@ -1,4 +1,5 @@
 % Moratis Konstantinos
+% Alexandros Tsingilis
 
 % Parametric and bootstrap null hypothesis testing for equal means
 
