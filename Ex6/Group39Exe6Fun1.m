@@ -1,4 +1,5 @@
 % Moratis Konstantinos
+% Alexandros Tsingilis
 
 % Simple linear regression model, R^2
 
