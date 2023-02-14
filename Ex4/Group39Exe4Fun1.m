@@ -1,4 +1,5 @@
 % Moratis Konstantinos
+% Alexandros Tsingilis
 
 % Correlation coefficient ci (parametric and bootstrap)
 % and H0: r=0 (parametric and non-parametric: random-perm) testing.
