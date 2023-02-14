@@ -1,4 +1,5 @@
 % Moratis Konstantinos
+% Alexandros Tsingilis
 
 % X_square test and Data visualization (histogram, bar graph) 
 
