@@ -1,4 +1,5 @@
 % Moratis Konstantinos
+% Alexandros Tsingilis
 
 % k-degree polynomial regression, non-linear regression
 
