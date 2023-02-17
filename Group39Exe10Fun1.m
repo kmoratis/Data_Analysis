@@ -1,3 +1,6 @@
+% Moratis Konstantinos
+% Alexandros Tsingilis
+
 function [optimal_model, lasso_penalty_factor] = Group39Exe10Fun1(y, X)
     % Find rows with complete data
     rows_with_complete_data = all(~isnan(X), 2);
