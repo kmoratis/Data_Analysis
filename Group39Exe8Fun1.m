@@ -1,3 +1,6 @@
+% Moratis Konstantinos
+% Alexandros Tsingilis
+
 function [adj_r_squared, p_value] = Group39Exe8Fun1(x, y)
     % Remove missing values
     x(isnan(y)) = [];
