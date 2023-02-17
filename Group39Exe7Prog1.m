@@ -21,6 +21,7 @@ for i = 2:12
         continue;
     end
     
+    %[index, m] = Group39Exe7Fun1(data(:,i), data(:,10), names(i));
     [index, m] = Group39Exe7Fun1(data(:,i), data(:,10), names(i));
     if (index<4)
         fprintf("Independent index: %s, best model: %d -degree polynomial, adj R^2 = %f\n", names(i), index, m);

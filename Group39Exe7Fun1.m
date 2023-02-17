@@ -18,8 +18,7 @@ newVector1 = newArr(:,1); % independent var (X)
 newVector2 = newArr(:,2); % dependent var (Y)
 n = numel(newVector1);
 
-R2_mat = NaN(7,1); % number of models = 7
-adj_R2_mat = NaN(7,1);
+adj_R2_mat = NaN(7,1); % number of models = 7
 figure('Position', [4, 4, 1080, 720]);
 clf;
 
@@ -42,15 +41,16 @@ for k=1:kmax
     mu_est_y = mean(est_y);
     eV = newVector2 - est_y;
     R2 = 1-(sum(eV.^2))/(sum((newVector2-mu_est_y).^2));
-    R2_mat(k) = R2;
     adjR2 =1-((n-1)/(n-(k+1)))*(sum(eV.^2))/(sum((newVector2-mu_est_y).^2));
     adj_R2_mat(k) = adjR2;
     
     % create scatter diagram, with estimated regression line
+    res = [newVector1 est_y];
+    res = sortrows(res);
     subplot(4,2,k);
     scatter(newVector1, newVector2);
     hold on;
-    plot(newVector1, est_y);
+    plot(res(:,1), res(:,2), 'LineWidth', 1.2);
     s_t = "adjR^2 = " + string(adjR2); %subtitle
     t = ["Polynomial r.m. degree " + string(k), s_t];
     title(t);
@@ -73,7 +73,6 @@ k = 1;
 mu_est_y2 = mean(est_y_2);
 eV = y_2 - est_y_2;
 R2 = 1-(sum(eV.^2))/(sum((y_2-mu_est_y2).^2));
-R2_mat(4) = R2;
 adjR2 =1-((n-1)/(n-(k+1)))*(sum(eV.^2))/(sum((y_2-mu_est_y2).^2));
 adj_R2_mat(4) = adjR2;
 
@@ -83,10 +82,22 @@ scatter(newVector1, newVector2);
 hold on;
 % reverse transform to get regression line (non-linear)
 r_est_y_2 = exp(est_y_2);
-plot(newVector1, r_est_y_2);
+res = [newVector1 r_est_y_2];
+res = sortrows(res);
+plot(res(:,1), res(:,2), 'LineWidth', 1.2);
 s_t = "adjR^2 = " + string(adjR2); %subtitle
 t = ["Exp non-linear r.m" , s_t];
 title(t);
+
+% SN and GR indexes are rank deficient to within machine precision for the models 5-7 
+if (name == "SN" || name == "GR")
+    % add global figure title
+    sgtitle("Regression models for FG, with " + name + " as independent var");
+    [m,i] = max(adj_R2_mat);
+    output1 = i;
+    output2 = m;
+    return;
+end
 
 % n.l.model 2: y = a*(x^b)
 % transform to linear
@@ -103,7 +114,6 @@ k = 1;
 mu_est_y2 = mean(est_y_2);
 eV = y_2 - est_y_2;
 R2 = 1-(sum(eV.^2))/(sum((y_2-mu_est_y2).^2));
-R2_mat(5) = R2;
 adjR2 =1-((n-1)/(n-(k+1)))*(sum(eV.^2))/(sum((y_2-mu_est_y2).^2));
 adj_R2_mat(5) = adjR2;
 
@@ -113,7 +123,9 @@ scatter(newVector1, newVector2);
 hold on;
 % reverse transform to get regression line (non-linear)
 r_est_y_2 = 10.^est_y_2;
-plot(newVector1, r_est_y_2); % newVector1 already reversed (was never transf)
+res = [newVector1 r_est_y_2];
+res = sortrows(res);
+plot(res(:,1), res(:,2), 'LineWidth', 1.2); % newVector1 already reversed (was never transf)
 s_t = "adjR^2 = " + string(adjR2); %subtitle
 t = ["Power non-linear r.m" , s_t];
 title(t);
@@ -133,7 +145,6 @@ k = 1;
 mu_est_y2 = mean(est_y_2);
 eV = y_2 - est_y_2;
 R2 = 1-(sum(eV.^2))/(sum((y_2-mu_est_y2).^2));
-R2_mat(6) = R2;
 adjR2 =1-((n-1)/(n-(k+1)))*(sum(eV.^2))/(sum((y_2-mu_est_y2).^2));
 adj_R2_mat(6) = adjR2;
 
@@ -143,7 +154,9 @@ scatter(newVector1, newVector2);
 hold on;
 % reverse transform to get regression line (non-linear)
 r_est_y_2 = est_y_2;
-plot(newVector1, r_est_y_2); % newVector1 already reversed (was never transf)
+res = [newVector1 r_est_y_2];
+res = sortrows(res);
+plot(res(:,1), res(:,2), 'LineWidth', 1.2); % newVector1 already reversed (was never transf)
 s_t = "adjR^2 = " + string(adjR2); %subtitle
 t = ["y = a+b*log(x) non-linear r.m" , s_t];
 title(t);
@@ -163,7 +176,6 @@ k = 1;
 mu_est_y2 = mean(est_y_2);
 eV = y_2 - est_y_2;
 R2 = 1-(sum(eV.^2))/(sum((y_2-mu_est_y2).^2));
-R2_mat(7) = R2;
 adjR2 =1-((n-1)/(n-(k+1)))*(sum(eV.^2))/(sum((y_2-mu_est_y2).^2));
 adj_R2_mat(7) = adjR2;
 
@@ -173,7 +185,9 @@ scatter(newVector1, newVector2);
 hold on;
 % reverse transform to get regression line (non-linear)
 r_est_y_2 = est_y_2;
-plot(newVector1, r_est_y_2); % newVector1 already reversed (was never transf)
+res = [newVector1 r_est_y_2];
+res = sortrows(res);
+plot(res(:,1), res(:,2), 'LineWidth', 1.2); % newVector1 already reversed (was never transf)
 s_t = "adjR^2 = " + string(adjR2); %subtitle
 t = ["Reverse non-linear r.m" , s_t];
 title(t);
@@ -187,4 +201,3 @@ sgtitle("Regression models for FG, with " + name + " as independent var");
 output1 = i;
 output2 = m;
 end
-
