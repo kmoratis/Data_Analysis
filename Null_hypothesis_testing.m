@@ -3,7 +3,7 @@
 
 % Parametric and bootstrap null hypothesis testing for equal means
 
-function [output1,output2] = Group39Exe3Fun1(inputVector1,inputVector2)
+function [output1,output2] = Null_hypothesis_testing(inputVector1,inputVector2)
 % given inputVector1 and inputVector2, it finds the first discontinuation
 % point in inputVector1 data, and creates two sub-vectors by spliting
 % inputVector2 at the discontinuation point. 
