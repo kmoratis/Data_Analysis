@@ -23,7 +23,7 @@ X = removevars(data, {'FG', 'GR'});
 X = table2array(X);
 
 % Fit model
-[optimal_model, lasso_penalty_factor] = Group39Exe10Fun1(y, X)
+[optimal_model, lasso_penalty_factor] = LASSO_reg(y, X)
 
 disp("Independent Variabe 'GR':")
 disp("===========================")
@@ -33,4 +33,4 @@ disp("===========================")
 y = data{:,'GR'};
 
 % Fit model
-[optimal_model, lasso_penalty_factor] = Group39Exe10Fun1(y, X)
+[optimal_model, lasso_penalty_factor] = LASSO_reg(y, X)
