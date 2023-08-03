@@ -22,6 +22,6 @@ p_values = [];
 for i=1:length(x_names)
     fprintf("Fitting Quadratic Model for indicator '%s'.\n",x_names{i});
     x = table2array( data(:,i) );
-    [adj_r_sq(i), p_values(i)] = Group39Exe8Fun1(x,y);
+    [adj_r_sq(i), p_values(i)] = Select_reg_model(x,y);
     fprintf("The adj-r-square coeffcient is %f.\n\n",adj_r_sq(i));
 end
