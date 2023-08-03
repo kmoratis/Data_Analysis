@@ -18,7 +18,7 @@ cor_pairs = ["Index1" "Index2" "Param p-val" "Random-per p-val" "Param ci low" "
 
 for i=2:9
     for j = i+1:10
-        [n, param_p, rp_p, param_ci, boot_ci] = Group39Exe4Fun1(data(:,i), data(:,j));
+        [n, param_p, rp_p, param_ci, boot_ci] = Corr_coef_testing(data(:,i), data(:,j));
         
         % test for each metric
         % h = 0  means cannot reject H0: r = 0
