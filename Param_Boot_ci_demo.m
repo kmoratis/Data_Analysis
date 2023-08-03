@@ -15,7 +15,7 @@ n = length(data);
 data_before73 = data(1:10,:);
 data_after73 = data(11:n,:); %including 73
 for i = 2:10
-    [param_ci, boot_ci] = Group39Exe2Fun1(data_after73(:,i));
+    [param_ci, boot_ci] = Param_Boot_ci(data_after73(:,i));
     
     % calculate '49-58 mean value of the index
     mu = mean(data_before73(:,i));
