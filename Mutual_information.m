@@ -3,7 +3,7 @@
 
 % Mutual Information
 
-function I = Group39Exe5Fun1(x,y)
+function I = Mutual_information(x,y)
 % Remove missing Values
 A = rmmissing([x y],1);
 x = A(:,1);
