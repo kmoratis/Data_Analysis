@@ -3,7 +3,7 @@
 
 % Simple linear regression model, R^2
 
-function [output1] = Group39Exe6Fun1(inputVector1,inputVector2, fig_name, ind_name)
+function [output1] = Simple_linear_reg(inputVector1,inputVector2, fig_name, ind_name)
 
 % ouput1 = R_squared 
 
