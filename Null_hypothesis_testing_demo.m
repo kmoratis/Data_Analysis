@@ -16,7 +16,7 @@ years = data(:,1);
 names = string(headers); 
 
 for i = 2:10
-    [param_p, boot_p] = Group39Exe3Fun1(years, data(:,i));
+    [param_p, boot_p] = Null_hypothesis_testing(years, data(:,i));
     
     % print the results
     fprintf("For index %s, parametric p-val = %f, bootstrap p-val = %f\n", string(headers(i)), param_p, boot_p);
