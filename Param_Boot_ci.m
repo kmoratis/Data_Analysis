@@ -3,7 +3,7 @@
 
 % Parametric and bootstrap ci
 
-function [output1,output2] = Group39Exe2Fun1(inputVector)
+function [output1,output2] = Param_Boot_ci(inputVector)
 % given inputVector as input, it calculates 95% parametric ci and bootstrap
 % ci for mean value
 % output1 = parametric ci, output2 = bootstrap ci
