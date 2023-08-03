@@ -1,7 +1,7 @@
 % Moratis Konstantinos
 % Alexandros Tsingilis
 
-function [optimal_model, lasso_penalty_factor] = Group39Exe10Fun1(y, X)
+function [optimal_model, lasso_penalty_factor] = LASSO_reg(y, X)
     % Find rows with complete data
     rows_with_complete_data = all(~isnan(X), 2);
     X = X(rows_with_complete_data, :);
