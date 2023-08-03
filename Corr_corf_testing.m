@@ -4,7 +4,7 @@
 % Correlation coefficient ci (parametric and bootstrap)
 % and H0: r=0 (parametric and non-parametric: random-perm) testing.
 
-function [output1, output2, output3, output4, output5] = Group39Exe4Fun1(inputVector1,inputVector2)
+function [output1, output2, output3, output4, output5] = Corr_coef_testing(inputVector1,inputVector2)
 % Function takes two vectors with same size, finds the NaN el in the
 % vectors and removes the particular pairs that includes each NaN el.
 % Then it calculates the 95% ci for correlation coefficient with two ways
