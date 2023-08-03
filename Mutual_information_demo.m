@@ -28,7 +28,7 @@ disp(sprintf("The pearson correlation coefficent is rho = %f", rho));
 disp(sprintf("The corresponding p-value is %f", p));
 
 % Compute the Mutual Information
-I = Group39Exe5Fun1(x,y);
+I = Mutual_information(x,y);
 
 % Print result
 disp(sprintf("The Mutual Information was computed, I = %f", I));
