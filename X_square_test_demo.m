@@ -16,7 +16,7 @@ p_vals = NaN(11,3);
 for i = 2:12
     name = headers(1,i);
     vector = data(:,i);
-    [p_vals(i-1,1), p_vals(i-1,2), p_vals(i-1,3)] = Group39Exe1Fun1(vector, name);
+    [p_vals(i-1,1), p_vals(i-1,2), p_vals(i-1,3)] = X_square_test(vector, name);
 end
 
 output_arr = string(NaN(11,2)); 
