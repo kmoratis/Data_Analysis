@@ -1,9 +1,9 @@
 % Moratis Konstantinos
 % Alexandros Tsingilis
 
-% X_square test and Data visualization (histogram, bar graph) 
+% X square test and Data visualization (histogram, bar graph) 
 
-function [output1, output2, output3] = Group39Exe1Fun1(inputVector, name)
+function [output1, output2, output3] = X_square_test(inputVector, name)
 % output 3 == 1 if continuous index, else 0
 % output 1 == p from test for normal (if cont) || p from test from binomial (if discr)
 % output 2 == p from test for uniform (if cont) || p from test from discrete uniform (if discr)
