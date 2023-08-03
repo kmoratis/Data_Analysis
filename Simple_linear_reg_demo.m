@@ -42,7 +42,7 @@ for i = 2:12
             continue;
         end
         
-        R = Group39Exe6Fun1(data(:,j), data(:,i), fig, names(j));
+        R = Simple_linear_reg(data(:,j), data(:,i), fig, names(j));
         R_matrix(counter_r,1) = headers(i);
         R_matrix(counter_r, counter_c) = R;
     end
