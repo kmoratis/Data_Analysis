@@ -3,7 +3,7 @@
 
 % k-degree polynomial regression, non-linear regression
 
-function [output1,output2] = Group39Exe7Fun1(inputVector1,inputVector2, name)
+function [output1,output2] = Non_linear_reg(inputVector1,inputVector2, name)
 % inputVector1 = (X), inputVector1 = (Y)
 % output1 = index of model with max adj_R2:
     % 1-3 : k-degree polynomial, 4: exp, 5: power, 6: log, 7: reverse
