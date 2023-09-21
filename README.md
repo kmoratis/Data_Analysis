@@ -1,10 +1,10 @@
 # Final project for Data Analysis university course.
 
-### Data Manipulation - Visualization - Analysis. 
-### Linear & Non-Linear Regression,
-### on Weather index data for Heathrow Airport.
+## Data Manipulation - Visualization - Analysis. 
+## Linear & Non-Linear Regression,
+## on Weather index data for Heathrow Airport.
 
-### Contents list:
+## Contents list:
 - X_square test and Data visualization ( histogram, bar graph )
 - Parametric and Bootstrap confidence interval ( ci )
 - Parametric and Bootstrap null hypothesis testing for equal means
