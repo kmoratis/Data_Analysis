@@ -1,6 +1,6 @@
 # Final project for Data Analysis university course.
 
-### Data Manipulation - Visualization - Analysis. 
+### Data Analysis & Visualization. 
 ### Linear & Non-Linear Regression on Weather index data for Heathrow Airport.
 
 ### Contents list:
